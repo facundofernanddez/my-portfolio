@@ -36,9 +36,9 @@ export const ContactCard = () => {
         <label className="form-label text-light">Example textarea</label>
         <textarea className="form-control" rows="3" />
       </div>
-      <a href="" className="btn btn-outline-success text-light mb-3">
+      <button type="submit" className="btn btn-outline-success text-light mb-3">
         Enviar
-      </a>
+      </button>
     </div>
   );
 };

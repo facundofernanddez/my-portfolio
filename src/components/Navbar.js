@@ -4,9 +4,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark nav">
       <div className="container">
-        <a className="navbar-brand" href="">
-          Alejandro Facundo Fernández
-        </a>
+        <h5 className="navbar-brand">Alejandro Facundo Fernández</h5>
         <button
           className="navbar-toggler d-lg-none"
           type="button"
@@ -18,7 +16,7 @@ export const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="collapsibleNavId">
+        <div className="collapse navbar-collapse">
           <ul className="navbar-nav list-dark ms-auto mt-2 mt-lg-0">
             <li className="m-2">
               <a className="btn btn-outline-light">Sobre mi</a>
@@ -28,6 +26,24 @@ export const Navbar = () => {
             </li>
             <li className="m-2 text-light">
               <a className="btn btn-outline-light">¡Contáctame!</a>
+            </li>
+            <li className="m-2 text-light">
+              <a
+                href="https://www.linkedin.com/in/facundofernanddez/"
+                target="_blank"
+                className="btn btn-outline-light"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li className="m-2 text-light">
+              <a
+                href="https://github.com/facundofernanddez"
+                target="_blank"
+                className="btn btn-outline-light"
+              >
+                <i class="bi bi-github"></i>
+              </a>
             </li>
           </ul>
         </div>
