@@ -4,8 +4,8 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark nav">
       <div className="container">
-        <a className="navbar-brand" href="#">
-          Facundo Fernández
+        <a className="navbar-brand" href="">
+          Alejandro Facundo Fernández
         </a>
         <button
           className="navbar-toggler d-lg-none"
@@ -20,9 +20,14 @@ export const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav list-dark ms-auto mt-2 mt-lg-0">
-            <li className="m-2">¡Contáctame!</li>
-            <li>
-              <i class="bi bi-linkedin"></i>
+            <li className="m-2">
+              <a className="btn btn-outline-light">Sobre mi</a>
+            </li>
+            <li className="m-2 text-light">
+              <a className="btn btn-outline-light">Proyectos</a>
+            </li>
+            <li className="m-2 text-light">
+              <a className="btn btn-outline-light">¡Contáctame!</a>
             </li>
           </ul>
         </div>
