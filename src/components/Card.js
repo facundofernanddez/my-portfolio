@@ -1,11 +1,24 @@
+import profile from "../images/profile.jpg";
+let aboutMe = `Desde mis comienzos en la programacion`;
+
 export const HomeCard = () => {
   return (
     <div className="container mt-5">
       <div className="card">
-        <img src="" className="card-img-top" alt="profile-img" />
-        <div className="card-body">
-          <h5 className="card-title">Desarrollador Full-Stack</h5>
-          <p className="card-text">Aqui va mi descripcion</p>
+        <div className="row g-0">
+          <div className="col-4">
+            <img
+              src={profile}
+              className="img-fluid rounded-start profile-img"
+              alt="profile-img"
+            />
+          </div>
+          <div className="col-8">
+            <div className="card-body">
+              <h5 className="card-title">Sobre mi</h5>
+              <p className="card-text">{aboutMe}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
