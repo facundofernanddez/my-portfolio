@@ -1,7 +1,37 @@
 import profile from "../images/profile.jpg";
-let aboutMe = `Desde mis comienzos en la programacion`;
+import {
+  SiJava,
+  SiSpring,
+  SiSpringboot,
+  SiGit,
+  SiGithub,
+  SiSpringsecurity,
+  SiMysql,
+  SiHtml5,
+  SiCss3,
+  SiBootstrap,
+  SiJavascript,
+  SiReact,
+} from "react-icons/si";
+let aboutMe = `Desde mis comienzos en la programacion sentí mucha atracción y empecé de manera autodidacta aprendiendo lo básico y armando proyectos simples. Después de un tiempo empecé mi carrera como desarrollador Full-Stack en Egg Cooperation Bootcamp, en donde por 9 meses intensos aprendí diferentes tecnologías y realicé algunos proyectos con buenos resultados. Sigo con la mirada puesta en el crecimiento tanto personal como profesional, aprender nuevas tecnologías, perfeccionarme en las ya aprendidas y aplicarlas tanto en proyectos grupales como individuales.`;
 
 export const HomeCard = () => {
+  let arrIcon = [
+    <SiJava />,
+    <SiSpring />,
+    <SiSpringboot />,
+    <SiSpringsecurity />,
+    <SiGit />,
+    <SiGithub />,
+    <SiMysql />,
+    <SiHtml5 />,
+    <SiCss3 />,
+    <SiBootstrap />,
+    <SiJavascript />,
+    <SiReact />,
+  ].map((e) => {
+    return <p className="btn btn-outline-dark btn-lg fs-4 m-2">{e}</p>;
+  });
   return (
     <div className="container mt-5">
       <div className="card">
@@ -9,14 +39,20 @@ export const HomeCard = () => {
           <div className="col-4">
             <img
               src={profile}
-              className="img-fluid rounded-start profile-img"
+              className="img-fluid border border-5 rounded m-1"
               alt="profile-img"
             />
           </div>
           <div className="col-8">
             <div className="card-body">
-              <h5 className="card-title">Sobre mi</h5>
+              <h5 className="card-title text-center fs-3">Sobre mi</h5>
               <p className="card-text">{aboutMe}</p>
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title text-center fs-3">Tecnologías</h5>
+                  <h5 className="card-text">{arrIcon}</h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -48,7 +84,7 @@ export const ProjectsCard = () => {
     <div className="container mt-5">
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">Proyectos</h5>
+          <h5 className="card-title text-center fs-3">Proyectos</h5>
         </div>
         <IndividualProyectCard />
         <IndividualProyectCard />
