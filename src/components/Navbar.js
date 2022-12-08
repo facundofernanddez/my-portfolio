@@ -33,7 +33,7 @@ export const Navbar = () => {
                 target="_blank"
                 className="btn btn-outline-light"
               >
-                <i class="bi bi-linkedin"></i>
+                <i className="bi bi-linkedin"></i>
               </a>
             </li>
             <li className="m-2 text-light">
@@ -42,7 +42,7 @@ export const Navbar = () => {
                 target="_blank"
                 className="btn btn-outline-light"
               >
-                <i class="bi bi-github"></i>
+                <i className="bi bi-github"></i>
               </a>
             </li>
           </ul>
