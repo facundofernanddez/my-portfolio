@@ -1,8 +1,10 @@
 import perfil from "../images/profile.jpg";
 import emailjs from "emailjs-com";
+import "../styles/card.css";
 import { aboutMe_es } from "./Text";
 import { Fragment, useState } from "react";
 import { useForm } from "react-hook-form";
+import { projectsList } from "./projects";
 import {
   SiJava,
   SiSpring,
@@ -66,21 +68,39 @@ export const HomeCard = () => {
 };
 
 export const IndividualProyectCard = () => {
-  return (
-    <div className="card mt-3">
-      <img src="" className="card-img-top" alt="..." />
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="http://www.google.com" className="btn btn-primary">
-          Go somewhere
-        </a>
-      </div>
-    </div>
-  );
+  const projects = projectsList.map((e) => {
+    return (
+      <>
+        <div className="row">
+          <div className="col-2">
+            <img src={e.img} className="card-img mt-4 img-project " alt="..." />
+          </div>
+          <div className="col-10">
+            <div className="card-body">
+              <h5 className="card-title">{e.title}</h5>
+              <p className="card-text">{e.text}</p>
+              <a
+                target={(e.linkPage, "_blank")}
+                href={e.linkPage}
+                className="btn btn-success m-1"
+              >
+                Ir al sitio
+              </a>
+              <a
+                target={(e.linkCode, "_blank")}
+                href={e.linkCode}
+                className="btn btn-primary"
+              >
+                Ir al código
+              </a>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  });
+
+  return projects;
 };
 
 export const ProjectsCard = () => {
@@ -90,8 +110,6 @@ export const ProjectsCard = () => {
         <div className="card-body">
           <h5 className="card-title text-center fs-3">Proyectos</h5>
         </div>
-        <IndividualProyectCard />
-        <IndividualProyectCard />
         <IndividualProyectCard />
       </div>
     </div>
@@ -115,21 +133,12 @@ export const ContactCard = () => {
     },
   });
 
-  // const handleInputChange = (e) => {
-  //   setInput({
-  //     ...input,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
-
   const resetForm = () => {
     reset();
   };
 
   const sendEmail = (data, e) => {
     console.log(data);
-    // const myForm = e.target;
-    // e.preventDefault();
     resetForm();
 
     emailjs
@@ -155,11 +164,7 @@ export const ContactCard = () => {
   };
   return (
     <Fragment>
-      <form
-        onSubmit={handleSubmit(sendEmail)}
-        className="needs-validation"
-        noValidate
-      >
+      <form onSubmit={handleSubmit(sendEmail)}>
         <div className="container mt-5">
           <label htmlFor="email" className="form-label text-light">
             Email
