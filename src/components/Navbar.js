@@ -2,44 +2,52 @@ import "../styles/navbar.css";
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark nav">
+    <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
         <h5 className="navbar-brand">Alejandro Facundo Fernández</h5>
         <button
-          className="navbar-toggler d-lg-none"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId"
+          data-bs-target="#barrita"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav list-dark ms-auto mt-2 mt-lg-0">
-            <li className="m-2">
-              <a className="btn btn-outline-light">Sobre mi</a>
+        <div id="barrita" className="collapse navbar-collapse">
+          <ul className="nav ms-auto mt-lg-0">
+            <li className="nav-item m-2 text-light">
+              <a className="btn btn-outline-light" href="#sobre-mi">
+                Sobre mi
+              </a>
             </li>
-            <li className="m-2 text-light">
-              <a className="btn btn-outline-light">Proyectos</a>
+            <li className="nav-item m-2 text-light">
+              <a className="btn btn-outline-light" href="#projects">
+                Proyectos
+              </a>
             </li>
-            <li className="m-2 text-light">
-              <a className="btn btn-outline-light">¡Contáctame!</a>
+            <li className="nav-item m-2 text-light">
+              <a className="btn btn-outline-light" href="#contact">
+                ¡Contáctame!
+              </a>
             </li>
-            <li className="m-2 text-light">
+            <li className="nav-item m-2 text-light">
               <a
                 href="https://www.linkedin.com/in/facundofernanddez/"
-                target="_blank"
+                target={
+                  ("https://www.linkedin.com/in/facundofernanddez/", "_blank")
+                }
                 className="btn btn-outline-light"
               >
                 <i className="bi bi-linkedin"></i>
               </a>
             </li>
-            <li className="m-2 text-light">
+            <li className="nav-item m-2 text-light">
               <a
                 href="https://github.com/facundofernanddez"
-                target="_blank"
+                target={("https://github.com/facundofernanddez", "_blank")}
                 className="btn btn-outline-light"
               >
                 <i className="bi bi-github"></i>

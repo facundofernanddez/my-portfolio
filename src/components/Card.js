@@ -39,17 +39,24 @@ export const HomeCard = () => {
   });
 
   return (
-    <div className="container mt-5">
+    <div
+      id="sobre-mi"
+      data-bs-spy="scroll"
+      data-bs-target="#navbar"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      className="container mt-5"
+    >
       <div className="card">
-        <div className="row g-0">
-          <div className="col-4">
+        <div className="row">
+          <div className="col-lg-4">
             <img
               src={perfil}
-              className="img-fluid border border-5 rounded m-2"
+              className="img-thumbnail rounded"
               alt="profile-img"
             />
           </div>
-          <div className="col-8">
+          <div className="col-lg-8">
             <div className="card-body">
               <h5 className="card-title text-center fs-3">Sobre mi</h5>
               <p className="card-text fs-5 fw-light">{aboutMe_es}</p>
@@ -72,10 +79,14 @@ export const IndividualProyectCard = () => {
     return (
       <>
         <div className="row">
-          <div className="col-2">
-            <img src={e.img} className="card-img mt-4 img-project " alt="..." />
+          <div className="col-lg-2">
+            <img
+              src={e.img}
+              className="img-thumbnail col-lg-6 rounded mx-auto img-project"
+              alt="..."
+            />
           </div>
-          <div className="col-10">
+          <div className="col-lg-10">
             <div className="card-body">
               <h5 className="card-title">{e.title}</h5>
               <p className="card-text">{e.text}</p>
@@ -105,7 +116,14 @@ export const IndividualProyectCard = () => {
 
 export const ProjectsCard = () => {
   return (
-    <div className="container mt-5">
+    <div
+      id="projects"
+      data-bs-spy="scroll"
+      data-bs-target="#navbar"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      className="container mt-5"
+    >
       <div className="card">
         <div className="card-body">
           <h5 className="card-title text-center fs-3">Proyectos</h5>
@@ -165,7 +183,15 @@ export const ContactCard = () => {
   return (
     <Fragment>
       <form onSubmit={handleSubmit(sendEmail)}>
-        <div className="container mt-5">
+        <div
+          id="contact"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar"
+          data-bs-root-margin="0px 0px -40%"
+          data-bs-smooth-scroll="true"
+          className="container mt-5"
+        >
+          <h5 className="text-light fs-3 text-center">¡Contáctame!</h5>
           <label htmlFor="email" className="form-label text-light">
             Email
           </label>

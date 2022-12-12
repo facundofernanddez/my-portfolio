@@ -5,7 +5,9 @@ export const Body = () => {
   return (
     <>
       <HomeCard />
+
       <ProjectsCard />
+
       <ContactCard />
     </>
   );
