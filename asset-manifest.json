@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.bd3ccd72.css",
+    "main.js": "/my-portfolio/static/js/main.9bdbd20b.js",
+    "static/media/profile.jpg": "/my-portfolio/static/media/profile.bb04b4b0dffdd4a6a575.jpg",
+    "static/media/calculadora.png": "/my-portfolio/static/media/calculadora.42070a4daa9eeeacfbbc.png",
+    "static/media/tareas.png": "/my-portfolio/static/media/tareas.37d3aceb5dcd442e837d.png",
+    "static/media/contador-clics.png": "/my-portfolio/static/media/contador-clics.8b7e1b81691d5eae62be.png",
+    "index.html": "/my-portfolio/index.html",
+    "main.bd3ccd72.css.map": "/my-portfolio/static/css/main.bd3ccd72.css.map",
+    "main.9bdbd20b.js.map": "/my-portfolio/static/js/main.9bdbd20b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd3ccd72.css",
+    "static/js/main.9bdbd20b.js"
+  ]
+}
